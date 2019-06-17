@@ -10,4 +10,5 @@ Foreach-Object {
     New-Item -Force -ItemType SymbolicLink -Path {{pkg.svc_config_path}}/$file -Value $_.FullName
 }
 
-mongod.exe --config "{{pkg_svc_config_path}}\mongod.conf"
+Set-Alias mongod "{{pkg.svc_var_path}}\MongoDB\Server\4.0\bin\mongod.exe"
+Set-Alias mongo "{{pkg.svc_var_path}}\MongoDB\Server\4.0\bin\mongo.exe"

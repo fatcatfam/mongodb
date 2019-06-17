@@ -20,7 +20,7 @@ function Invoke-Unpack {
   mkdir "$HAB_CACHE_SRC_PATH\$pkg_dirname"
   Push-Location "$HAB_CACHE_SRC_PATH\$pkg_dirname"
   try {
-    lessmsi x (Resolve-Path "$HAB_CACHE_SRC_PATH\$pkg_filename").Pathz
+    lessmsi x (Resolve-Path "$HAB_CACHE_SRC_PATH\$pkg_filename").Path
   }
   finally { Pop-Location }
 }
