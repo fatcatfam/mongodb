@@ -1,13 +1,2 @@
 mkdir "{{pkg.svc_data_path}}/db"
 mkdir "{{pkg.svc_files_path}}/tmp"
-# Copy-Item -Recurse -Force "{{pkg.path}}/" "{{pkg.svc_var_path}}/"
-
-# Symlink config files into $TOMCAT_HOME/conf
-Get-ChildItem "{{pkg.svc_config_path}}" |
-Foreach-Object {
-    $file = $_.Name -replace "_","/"
-    New-Item -Force -ItemType SymbolicLink -Path {{pkg.svc_config_path}}/$file -Value $_.FullName -verbose
-}
-
-mongod --config "{{pkg.svc_config_path}}\mongod.conf"
-

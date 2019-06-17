@@ -8,6 +8,7 @@ $pkg_source="https://fastdl.mongodb.org/win32/mongodb-win32-x86_64-2008plus-ssl-
 $pkg_shasum="d1ddac7ba6e2fbdfaaa0a787b83c165d4ad61795c051dc0f3142717a0b6a3707"
 $pkg_upstream_url='https://www.mongodb.com/'
 $pkg_deps=@("core/lessmsi", "core/python")
+$pkg_svc_run="mongod --config {{pkg_svc_config_path}}\mongod.conf"
 $pkg_exports=@{port="mongod.net.port"}
 $pkg_exposes=@('port')
 
