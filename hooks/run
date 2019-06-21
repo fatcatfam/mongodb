@@ -1,0 +1,1 @@
+mongod --dbpath="{{pkg.svc_data_path}}/db" --config "{{pkg.svc_config_path}}/mongod.cfg"

@@ -1,2 +1,2 @@
-mkdir "{{pkg.svc_data_path}}\db"
-mkdir "{{pkg.svc_files_path}}\tmp"
+mkdir "{{pkg.svc_data_path}}/db"
+mkdir "{{pkg.svc_files_path}}/tmp"
